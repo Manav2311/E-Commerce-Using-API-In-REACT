@@ -97,7 +97,6 @@ function ReviewProduct({ productId }) {
                 style={{ borderRadius: "12px" }}
               >
                 <Card.Body>
-                  {/* Delete Button */}
                   <Button
                     variant="danger"
                     className="fs-4"
@@ -116,8 +115,6 @@ function ReviewProduct({ productId }) {
                   >
                     <IoIosCloseCircleOutline />
                   </Button>
-
-                  {/* Star Rating */}
                   <div className="mb-2">
                     {[...Array(rev.star)].map((_, j) => (
                       <FaStar
@@ -127,7 +124,6 @@ function ReviewProduct({ productId }) {
                     ))}
                   </div>
 
-                  {/* Review Text */}
                   <Card.Text style={{ fontSize: "1rem", color: "#333" }}>
                     {rev.description}
                   </Card.Text>
