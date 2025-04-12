@@ -36,5 +36,37 @@
         "count": 70
       }
     }
+  ],
+  "review": [
+    {
+      "id": "e761",
+      "description": "qwertyu",
+      "star": 3,
+      "productId": "5"
+    },
+    {
+      "id": "6c99",
+      "description": "qASERDTFGH",
+      "star": 1,
+      "productId": "5"
+    },
+    {
+      "id": "9914",
+      "description": "qwertyuop",
+      "star": 3,
+      "productId": "5"
+    },
+    {
+      "id": "bc8d",
+      "description": "asdfghjkl",
+      "star": 3,
+      "productId": "1"
+    },
+    {
+      "id": "478e",
+      "description": "asdfghjkl",
+      "star": -1,
+      "productId": "1"
+    }
   ]
 }

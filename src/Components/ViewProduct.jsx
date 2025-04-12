@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
+import ReviewProduct from "./ReviewProduct";
 
 const ViewProduct = () => {
   const [productData, setProductData] = useState([]);
-  let navigate = useNavigate()
+  let navigate = useNavigate();
   let { id } = useParams();
 
   console.log(id);
@@ -12,7 +13,7 @@ const ViewProduct = () => {
     let productData = async () => {
       let data = await fetch(`http://localhost:3000/products/?id=${id}`);
       let showData = await data.json();
-
+      
       setProductData(showData);
     };
     productData();
@@ -32,10 +33,18 @@ const ViewProduct = () => {
                 />
               </Col>
               <Col>
-                <h2>{val.title} <></> </h2>
+                <h2>
+                  {val.title} <></>{" "}
+                </h2>
                 <span className="fs-5 mb-2">{val.description}</span>
                 <br />
                 <span className="fs-4 mt-2">${val.price}</span>
+              </Col>
+            </Row>
+            
+            <Row>
+              <Col>
+                <ReviewProduct productId={val.id }/>
               </Col>
             </Row>
           </Container>
